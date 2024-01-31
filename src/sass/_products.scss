@@ -4,6 +4,12 @@
 .product-section h1 {
   text-align: center;
   margin-bottom: 50px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.72px;
 }
 .product-section ul {
   list-style: none;
@@ -80,4 +86,10 @@
   width: 28px;
   border-radius: 18px;
   height: 13px;
+}
+
+@media screen and (max-width: 767px) {
+  .product-section h1 {
+    font-size: 20px;
+  }
 }
