@@ -81,6 +81,150 @@
   line-height: 18px; /* 128.571% */
   letter-spacing: -0.28px;
 }
+.review-section .is-hidden-review {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.review-section .backdrop {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.review-section .modal {
+  width: 517px;
+  height: 628px;
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-height: 584px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+}
+.review-section .modal-button {
+  border-radius: 100px;
+  background: var(--orange);
+  padding: 14px 40px;
+  border: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--white);
+}
+.review-section .close-button {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.review-section .close-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.review-section .close-button:hover .close-icons {
+  fill: var(--orange);
+}
+.review-section .modal h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.review-section .modal form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18;
+}
+.review-section .modal h1 span {
+  color: var(--orange);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+.review-section .modal form input {
+  padding: 22px 24px 22px 24px;
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+
+  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+}
+
+.review-section .modal form input::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.review-section .modal form textarea {
+  border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  padding: 22px 24px 22px 24px;
+}
+.review-section .modal form textarea::placeholder {
+  color: rgba(64, 64, 64, 0.3);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.review-section .modal form .phone {
+  width: 100%;
+  padding-left: 167px !important;
+}
+
+.review-section .modal form .phone-network {
+  display: flex;
+  position: absolute;
+  left: 24px;
+  top: 28%;
+  border-right: 3.5px solid rgba(17, 17, 17, 0.05);
+}
+.review-section .modal form .form-group {
+  position: relative;
+}
+.review-section .modal form .phone-network p {
+  margin: 0 18px 0 32px;
+  color: var(--black);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
 @media screen and (max-width: 767px) {
   .review-section .review-h1 {
     font-size: 20px;
