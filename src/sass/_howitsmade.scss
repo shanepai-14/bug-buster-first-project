@@ -39,6 +39,8 @@
     width: 600px;
     height: 400px;
     flex-shrink: 0;
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
 
 }
 
@@ -115,9 +117,9 @@
 
 
 .ul-left {
-    width: 600px;
-        height: 400px;
-        flex-shrink: 0;
+    // width: 600px;
+    //     height: 400px;
+    //     flex-shrink: 0;
         border-radius: 15px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%)
 }
