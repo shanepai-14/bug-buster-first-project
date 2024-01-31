@@ -14,7 +14,27 @@ var swiper = new Swiper('.mySwiper', {
     1159: {
       slidesPerView: 4,
     },
-    300: {
+    1: {
+      slidesPerView: 1,
+    },
+  },
+});
+
+var swiper = new Swiper('.reviewSwiper', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  slidesPerView: 3,
+  spaceBetween: 28,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1159: {
+      slidesPerView: 3,
+    },
+    1: {
       slidesPerView: 1,
     },
   },

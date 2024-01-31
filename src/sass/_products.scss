@@ -1,3 +1,6 @@
+.product-section {
+  margin-bottom: 120px;
+}
 .product-section h1 span {
   color: var(--orange);
 }
@@ -17,13 +20,13 @@
 .product-section .container {
   padding: 0 33px;
 }
-.swiper {
+.product-section .swiper {
   width: 100%;
   height: 100%;
   padding-bottom: 48px;
 }
 
-.swiper-slide {
+.product-section .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: var(--white);
@@ -36,13 +39,13 @@
   overflow: hidden;
 }
 
-.swiper-slide img {
+.product-section .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.swiper-slide h1 {
+.product-section .swiper-slide h1 {
   color: var(--black);
 
   font-size: 18px;
@@ -54,7 +57,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.swiper-slide p {
+.product-section .swiper-slide p {
   color: var(--black);
 
   font-size: 12px;
@@ -64,7 +67,7 @@
   letter-spacing: -0.24px;
   margin-top: 0;
 }
-.swiper-slide button {
+.product-section .swiper-slide button {
   border-radius: 100px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   font-family: Montserrat;
