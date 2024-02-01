@@ -1,4 +1,99 @@
 .simplychocolate {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--white);
+    color: #111;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+    letter-spacing: -0.54px;
+}
+
+.choco {
+    color: #111;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.54px;
+}
+
+li{
+    list-style: none;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hero .container {
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.40) 100%), url(../images/headerhero/chocolatehero.jpg), lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat;
+    width: 100%;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.hero {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 72px;
+}
+
+.h1hero {
+    width: 484px;
+    height: 102px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px; /* 121.429% */
+    letter-spacing: -0.84px;
+}
+
+.buynowbutton {
+    display: inline-flex;
+    padding: 14px 40px;
+    align-items: flex-start;
+    gap: 14px;
+    border-radius: 100px;
+    background: #FD9222;
+    border: none;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.howitsmade {
+    display: flex;
+    width: 183px;
+    height: 45px;
+    padding: 14px 40px;
+    align-items: flex-start;
+    gap: 14px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+}
+
+.howitsmade {
+    width: 103px;
+    height: 17px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
