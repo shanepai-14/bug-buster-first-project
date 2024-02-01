@@ -1,7 +1,8 @@
 .exceptional-taste-section {
   margin-bottom: 100px;
 }
-h1 {
+
+.exceptional-taste-section h1 {
   width: 411px;
   margin: 0 auto 28px;
   color: var(--black);
@@ -15,11 +16,11 @@ h1 {
   text-transform: uppercase;
 }
 
-h1 > span {
+.exceptional-taste-section h1 > span {
   color: var(--orange);
 }
 
-.container > p {
+.exceptional-taste-section .container > p {
   width: 486px;
   margin: 0 auto 50px;
   color: var(--black);
@@ -32,13 +33,13 @@ h1 > span {
   letter-spacing: -0.28px;
 }
 
-.list {
+.exceptional-taste-section .list {
   display: flex;
   gap: 19px;
   padding: 0;
 }
 
-.list > li {
+.exceptional-taste-section .list > li {
   list-style: none;
   // flex-basis: calc((100% - 19px) / 4);
   padding: 0;
@@ -47,61 +48,63 @@ h1 > span {
 }
 
 // FLIP
-.card {
+.exceptional-taste-section .card {
   transform-style: preserve-3d;
   transition: transform 0.5s;
   padding: 28px 36px 28px 28px;
   border-radius: 15px;
   width: 100%;
   height: 100%;
+  border: transparent;
 }
 
-.front {
+.exceptional-taste-section .front {
   // display: flex;
   justify-content: space-between;
   align-items: center;
   height: 270px;
 }
 
-.front p {
+.exceptional-taste-section .front p {
   font-weight: 600;
 }
 
-.front,
-.back {
+.exceptional-taste-section .front,
+.exceptional-taste-section .back {
   backface-visibility: hidden;
 }
 
-ul > li:hover .card {
+.exceptional-taste-section ul > li:hover .card {
   transform: rotateY(180deg);
 }
 
-.back {
+.exceptional-taste-section .back {
   transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed;
+  inset: -2;
   padding: 20px;
   margin: 0;
   border-radius: 15px;
   background-color: var(--white);
+  border: 2px solid var(--white);
+  box-shadow: 1px -1px 9px 4px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: 1px -1px 9px 4px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 1px -1px 9px 4px rgba(0, 0, 0, 0.31);
 }
 
-.back h2 {
+.exceptional-taste-section .back h2 {
   padding: 0;
   margin: 0 auto 8px;
   color: var(--black);
 }
 
-.back .back-container {
+.exceptional-taste-section .back .back-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.back ul {
+.exceptional-taste-section .back ul {
   margin: 0 auto 14px;
   display: flex;
   justify-content: flex-start;
@@ -110,7 +113,7 @@ ul > li:hover .card {
   white-space: nowrap;
 }
 
-.back ul li {
+.exceptional-taste-section .back ul li {
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
@@ -123,7 +126,7 @@ ul > li:hover .card {
   justify-content: center;
 }
 
-.back p {
+.exceptional-taste-section .back p {
   overflow: hidden;
   color: #111;
   text-overflow: ellipsis;
@@ -139,28 +142,28 @@ ul > li:hover .card {
 }
 // END FLIP
 
-.orange-white-theme {
+.exceptional-taste-section .orange-white-theme {
   background-color: var(--orange);
   color: var(--white);
 }
 
-.white-orange-theme {
+.exceptional-taste-section .white-orange-theme {
   border: 1px solid var(--orange);
   color: var(--black);
 }
 
-.dark-blue-white-theme {
+.exceptional-taste-section .dark-blue-white-theme {
   background-color: var(--darkblue);
   color: var(--white);
 }
 
-.front > img {
+.exceptional-taste-section .front > img {
   display: block;
   width: 100%;
   margin: 0 auto 36px;
 }
 
-.front > p {
+.exceptional-taste-section .front > p {
   font-family: var(--montserrat);
   font-size: 14px;
   font-style: normal;
@@ -171,20 +174,20 @@ ul > li:hover .card {
   margin: 0;
 }
 
-ul > li:nth-child(odd) .front > p {
+.exceptional-taste-section ul > li:nth-child(odd) .front > p {
   color: var(--white);
 }
 
 // MEDIA QUERIES
 @media (min-width: 768px) {
-  ul > li {
+  .exceptional-taste-section ul > li {
     flex-basis: calc((100% - 19px) / 2);
     // flex-wrap: wrap;
   }
 }
 
 @media (min-width: 1000px) {
-  ul > li {
+  .exceptional-taste-section ul > li {
     flex-basis: calc((100% - 19px) / 3);
     // flex-wrap: wrap;
   }
