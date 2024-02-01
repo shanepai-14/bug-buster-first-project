@@ -67,12 +67,6 @@ h1 > span {
   font-weight: 600;
 }
 
-// .back {
-//   // padding: 28px 36px 28px 28px;
-//   // border-radius: 15px;
-//   // width: 100%;
-// }
-
 .front,
 .back {
   backface-visibility: hidden;
@@ -92,7 +86,6 @@ ul > li:hover .card {
   padding: 20px;
   margin: 0;
   border-radius: 15px;
-  border: 1px solid var(--darkblue);
   background-color: var(--white);
 }
 
