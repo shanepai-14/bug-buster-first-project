@@ -27,6 +27,7 @@
 }
 
 .review-section .swiper-slide {
+  height: 200px;
   text-align: center;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
@@ -61,6 +62,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  transition: all 250ms ease-in-out;
 }
 .review-section .swiper-slide h1 {
   text-align: center;
@@ -81,7 +83,16 @@
   line-height: 18px; /* 128.571% */
   letter-spacing: -0.28px;
 }
-
+@keyframes modalAnimation {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
 // Modal Design -----------------------------------------
 
 .review-section .is-hidden-review {
@@ -89,21 +100,31 @@
   pointer-events: none;
   visibility: hidden;
 }
-.review-section .backdrop {
+
+.is-hidden-topseller {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop {
   z-index: 2;
-  width: 100vw;
-  height: 100vh;
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  overflow: auto;
 }
 .review-section .modal {
   width: 517px;
   height: 628px;
-  background-color: var(--white);
+  background-color: #fafafa;
   border-radius: 15px;
   padding: 24px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -111,12 +132,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  min-height: 584px;
+  transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: modalAnimation 0.5s ease-out;
   padding: 40px;
+  transition: all 250ms ease-in-out;
 }
-.review-section .modal-button {
+.modal-button {
   border-radius: 100px;
   background: var(--orange);
   padding: 14px 40px;
@@ -127,7 +149,7 @@
   line-height: normal;
   color: var(--white);
 }
-.review-section .close-button {
+.close-button {
   width: 24px;
   height: 24px;
   position: absolute;
@@ -137,15 +159,23 @@
   background-color: transparent;
   padding: 0;
 }
-.review-section .close-icons {
+.close-icons {
   display: flex;
   align-items: center;
   justify-content: center;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-.review-section .close-button:hover .close-icons {
-  fill: var(--orange);
+.close-icons use {
+  stroke: var(--black);
+  transition: all 250ms ease-in-out;
+}
+.close-button:hover .close-icons use {
+  stroke: var(--orange);
+}
+
+.review-br {
+  display: none;
 }
 .review-section .modal h1 {
   font-size: 24px;
@@ -157,7 +187,7 @@
   margin-top: 0;
   margin-bottom: 40px;
 }
-.review-section .modal form {
+.modal form {
   display: flex;
   flex-direction: column;
   row-gap: 18;
@@ -171,7 +201,8 @@
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
-.review-section .modal form input {
+.modal form input {
+  background-color: transparent;
   padding: 22px 24px 22px 24px;
   border-radius: 13px;
   border: 1.5px solid rgba(17, 17, 17, 0.05);
@@ -179,7 +210,7 @@
   box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
 }
 
-.review-section .modal form input::placeholder {
+.modal form input::placeholder {
   color: rgba(64, 64, 64, 0.3);
 
   font-family: Montserrat;
@@ -189,12 +220,13 @@
   line-height: normal;
   letter-spacing: -0.36px;
 }
-.review-section .modal form textarea {
+.modal form textarea {
+  background-color: transparent;
   border-radius: 13px;
   border: 1.5px solid rgba(17, 17, 17, 0.05);
   padding: 22px 24px 22px 24px;
 }
-.review-section .modal form textarea::placeholder {
+.modal form textarea::placeholder {
   color: rgba(64, 64, 64, 0.3);
   font-family: Montserrat;
   font-size: 18px;
@@ -203,22 +235,22 @@
   line-height: normal;
   letter-spacing: -0.36px;
 }
-.review-section .modal form .phone {
+.modal form .phone {
   width: 100%;
   padding-left: 167px !important;
 }
 
-.review-section .modal form .phone-network {
+.modal form .phone-network {
   display: flex;
   position: absolute;
   left: 24px;
   top: 28%;
   border-right: 3.5px solid rgba(17, 17, 17, 0.05);
 }
-.review-section .modal form .form-group {
+.modal form .form-group {
   position: relative;
 }
-.review-section .modal form .phone-network p {
+.modal form .phone-network p {
   margin: 0 18px 0 32px;
   color: var(--black);
   font-family: Montserrat;
@@ -228,6 +260,14 @@
   line-height: normal;
   letter-spacing: -0.36px;
 }
+.phone-network svg {
+  width: 32;
+  height: 25;
+}
+.review-btn:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
 
 // Media Query -----------------------------------------------------
 @media screen and (max-width: 767px) {
@@ -236,6 +276,75 @@
   }
   .review-btn {
     font-size: 14px;
+    padding: 12px 28px;
+  }
+  .review-section .modal {
+    width: 311px;
+    height: auto;
+
+    padding: 32px 24px;
+  }
+  .review-section .modal h1 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .review-section .modal h1 span {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+  }
+  .modal form input {
+    padding: 14px 18px;
+  }
+  .modal form input::placeholder {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
+  }
+  .modal form .phone-network p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    margin-left: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .phone-network svg {
+    width: 24px;
+    height: 18px;
+  }
+  .modal form .phone {
+    padding-left: 110px !important;
+  }
+  .modal form textarea {
+    padding: 14px 18px;
+  }
+  .modal form textarea::placeholder {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
+  }
+  .review-section .modal form {
+    row-gap: 14px;
+  }
+  .review-br {
+    display: block;
+  }
+  .modal-button {
     padding: 12px 28px;
   }
 }
