@@ -7,11 +7,13 @@
   --darkblue: #1e1823;
   --orange: #fd9222;
   --montserrat: 'Montserrat', sans-serif;
+  --light:  #FAFAFA;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--white);
+  background-color: var(--light);
+  
 }
 .container {
   width: 100%;
