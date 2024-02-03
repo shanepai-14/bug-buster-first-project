@@ -14,6 +14,7 @@
     line-height: 28px; /* 116.667% */
     letter-spacing: -0.72px;
 }
+
 .seller-section .container {
     padding: 0 33px;
   }
@@ -32,4 +33,27 @@
   .pic img {
     border-radius: 15px;
   }
-  
+
+  // MODAL STYLING
+  .name-container, .name-group {
+    display: inline-block;
+  }
+  .form-title{
+color: var(--orange);
+text-align: center;
+font-family: "Montserrat", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.16667;
+letter-spacing: -0.03em;
+text-transform: uppercase;
+text-align: center;
+color: #fd9222;
+  }
+  span{
+    color:black;
+  }
+.text-container{
+  display: flex;
+  justify-content: space-between;
+}
