@@ -96,19 +96,43 @@
       <div class="swiper-pagination"></div>
     </div>
     <div class="review-btn-div">
-      <button class="review-btn">Leave a review</button>
+      <button type="button" class="review-btn" data-modal-review-open>
+        Leave a review
+      </button>
     </div>
   </div>
 
-  <div class="backdrop is-hidden" data-review-modal hidden>
+  <div class="backdrop is-hidden-review" data-modal-review>
     <div class="modal">
-      <button data-modal-close class="close-button" type="button">
-        <svg class="close-icons" width="8" height="8">
-          <!-- <use href="./images/icons.svg#close" /> -->
+      <h1>
+        LEAVE A REVIEW <br class="review-br" />ABOUT <span>OUR CHOCOLATE</span>
+      </h1>
+      <button data-modal-review-close class="close-button" type="button">
+        <svg class="close-icons" width="28" height="28">
+          <use xlink:href="./images/sprite.svg#xblack" />
         </svg>
       </button>
+
       <form>
-        <button class="modal-button">Send</button>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <div class="form-group">
+          <div class="phone-network">
+            <svg>
+              <use xlink:href="./images/sprite.svg#flag" />
+            </svg>
+            <p>+380</p>
+          </div>
+          <input type="email" placeholder="Phone number" class="phone" />
+        </div>
+        <textarea
+          name="details"
+          id="details"
+          cols="30"
+          rows="5"
+          placeholder="Enter Text"
+        ></textarea>
+        <div><button class="modal-button">Submit</button></div>
       </form>
       <!-- </div> -->
     </div>

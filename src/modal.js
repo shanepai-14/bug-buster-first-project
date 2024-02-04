@@ -9,6 +9,21 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    refs.modal.classList.toggle('is-hidden-review');
+  }
+})();
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-modal-topseller-open]'),
+    closeModalBtn: document.querySelector('[data-modal-topseller-close]'),
+    modal: document.querySelector('[data-modal-topseller]'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden-topseller');
   }
 })();
