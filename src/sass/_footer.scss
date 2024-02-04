@@ -28,6 +28,14 @@
   letter-spacing: -0.28px;
 }
 
+.footer-first-list a {
+  transition: all 250ms ease-in-out;
+}
+
+.footer-first-list a:hover {
+  color: var(--orange);
+}
+
 .footer-first-list li:nth-child(1) {
   margin-bottom: 14px;
 }
@@ -52,6 +60,11 @@
 
 .footer-icon {
   stroke: var(--white);
+  transition: all 250ms ease-in-out;
+}
+
+.footer-icon:hover {
+  color: var(--orange);
 }
 
 .footer-nav {
@@ -70,6 +83,11 @@
   font-weight: 500;
   line-height: 16px; /* 114.286% */
   letter-spacing: -0.28px;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-nav li a:hover {
+  color: var(--orange);
 }
 
 //tablet
@@ -90,9 +108,17 @@
     flex-direction: column;
   }
 
+  .slogan {
+    margin-bottom: 32px;
+  }
+
   .footer-contact {
     gap: 0;
     justify-content: space-between;
+  }
+
+  .footer-socmed li {
+    height: 94px;
   }
 
   .footer-first-list {
