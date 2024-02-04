@@ -27,7 +27,7 @@
     padding-bottom: 48px;
     justify-content: space-between;
     margin: 0;
-    // width: calc((100% - 32px) / 3 );
+   
   }
   .caption{
     padding-left: 40px;;
@@ -35,6 +35,7 @@
   }
   .pic img {
     border-radius: 15px;
+    width: 100%;
   }
 .buy-btn{
   border-radius: 100px;
@@ -42,6 +43,11 @@ padding: 14px 40px;
 width: 162px;
 height: 50px;
 background: #fd9222;
+border: none;
+}
+
+.pic{
+   width: calc((100% - 32px) / 3 );
 }
 //   // MODAL STYLING
 //   .modal {
@@ -86,11 +92,11 @@ background: #fd9222;
 //   span{
 //     color:black;
 //   }
-// .text-container{
-//   display: flex;
-//   justify-content: space-between;
-//   width: 100%;
-// }
+.text-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 // .pic-group ul {
 //   list-style: none;
 //  display:flex;
