@@ -1,0 +1,220 @@
+.simplychocolate {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 20px; /* 111.111% */
+  letter-spacing: -0.54px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.choco {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.54px;
+}
+
+
+li {
+  list-style: none;
+}
+
+.social-media-item:hover, .social-media-item:focus {
+  fill: #fd9222;
+
+}
+
+// Hero section
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero .container {
+  background: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0) 0%,
+      rgba(17, 17, 17, 0.4) 100%
+    ),
+    url(../images/headerhero/Chocolatehero.jpg),
+    lightgray -70.319px -105.03px / 110.32% 139.265% no-repeat;
+  width: 100%;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 72px;
+}
+
+.h1hero {
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 121.429% */
+  letter-spacing: -0.84px;
+  padding-left: 40px;
+  padding-top: 381px;
+  
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+}
+
+.navliststyle-header{
+  display: flex;
+  align-items: center;
+}
+
+.header-menu{
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-link{
+  text-decoration: none;
+ }
+
+ .active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  background-color: var(--orange);
+  margin-bottom: -2px;
+}
+
+ .social-media-list{
+  display: flex;
+  gap: 18px;
+ }
+
+.buynowbutton {
+  display: inline-flex;
+  padding: 14px 40px;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 100px;
+  background: #fd9222;
+  border: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  justify-content: center;
+  margin-left: 40px;
+  margin-right: 14px;
+}
+
+.buynowbutton:hover {
+  border-radius: 100px;
+  background: #FCF1E0;
+  color: #FD9222;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-flex;
+ }
+
+.howitsmade {
+  padding: 14px 40px;
+  align-items: flex-start;
+  gap: 14px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  justify-content: center;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background: none;
+
+}
+
+.howitsmade:hover {
+  border: 1px solid #FD9222;
+  color: #FD9222;
+}
+
+.divbutton{
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.scrolldown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-right: 40px;
+  
+}
+
+.scrolldown p{
+  color: var(--white);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.42px;
+
+}
+
+.arrowbutton{
+  width: 38px;
+  height: 38px;
+  background-color: var(--white);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.arrowbuttonsvg {
+  fill: var(--orange);
+  margin: auto;
+}
+
+.scrolldown:hover .arrowbuttonsvg{
+  fill: var(--white);
+}
+
+.scrolldown:hover .scroll-p{
+  color: var(--orange);
+}
+
+.scrolldown:hover .arrowbutton{
+  background-color: var(--orange);
+}
