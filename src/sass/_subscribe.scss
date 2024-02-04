@@ -1,0 +1,76 @@
+.subscribe-section {
+  background-image: url('../images/subscribe/subscribe-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 72px 0;
+  text-align: center;
+  transition: all 450ms ease-in-out;
+}
+
+.subscribe-section h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.subscribe-section p {
+  width: 467px;
+  color: var(--white);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+.subscribe-section button {
+  margin: auto;
+  display: flex;
+  padding: 14px 40px;
+  border-radius: 100px;
+  background-color: var(--orange);
+  border: none;
+  color: var(--white);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 250ms ease-in-out;
+}
+
+.subscribe-section button:hover {
+  color: var(--orange);
+  background-color: var(--nakedbrown);
+}
+
+//tablet
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+  .subscribe-section {
+    background-image: url('../images/subscribe/Subcribe-tablet.jpg');
+  }
+}
+
+//mobile
+
+@media screen and (max-width: 767px) {
+  .subscribe-section {
+    background-image: url('../images/subscribe/Subcribe-mobile.jpg');
+  }
+  .subscribe-section h1 {
+    font-size: 20px;
+  }
+
+  .subscribe-section button {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+}
