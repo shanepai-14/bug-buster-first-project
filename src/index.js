@@ -59,20 +59,23 @@ var swiper = new Swiper('.reviewSwiper', {
     mobileMenu.classList.toggle('is-open');
 
     const scrollLockMethod = !isMenuOpen
-    ? 'disableBodyScroll'
-    : 'enableBodyScroll';
-  bodyScrollLock[scrollLockMethod](document.body); 
-  };  
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
+  };
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
 
-      window.matchMedia('(max-width: 767px)').addEventListener('change', e => {
+  window.matchMedia('(max-width: 1158px)').addEventListener('change', e => {
     if (!e.matches) return;
 
-      openMenuBtn.style.display = 'block';
-   
+    openMenuBtn.style.display = 'block';
   });
-  
 
+  window.matchMedia('(min-width: 1159px)').addEventListener('change', e => {
+    if (!e.matches) return;
+
+    openMenuBtn.style.display = 'none';
+  });
 })();
