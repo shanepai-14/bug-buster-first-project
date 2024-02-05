@@ -5,7 +5,9 @@ var swiper = new Swiper('.mySwiper', {
   },
   slidesPerView: 4,
   spaceBetween: 18,
-
+  autoplay: {
+    delay: 3000,
+  },
   breakpoints: {
     // when window width is >= 320px
     768: {
@@ -23,6 +25,9 @@ var swiper = new Swiper('.mySwiper', {
 var swiper = new Swiper('.reviewSwiper', {
   pagination: {
     el: '.swiper-pagination',
+  },
+  autoplay: {
+    delay: 3000,
   },
   slidesPerView: 3,
   spaceBetween: 28,
