@@ -6,11 +6,14 @@
   font-weight: 700;
   line-height: 20px; /* 111.111% */
   letter-spacing: -0.54px;
-  padding-left: 40px;
-  padding-bottom: 40px;
+  padding-left: 20px;
+  gap: 4px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.choco {
+.chocochoco {
   color: #111;
   font-family: Montserrat;
   font-size: 18px;
@@ -25,9 +28,12 @@ li {
   list-style: none;
 }
 
-.social-media-item:hover, .social-media-item:focus {
-  fill: #fd9222;
+.social-media-link:hover .social-media{
+  stroke: var(--orange);
+}
 
+.social-media{
+  stroke: var(--black)
 }
 
 // Hero section
@@ -50,6 +56,7 @@ li {
   border-radius: 25px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .hero {
@@ -81,36 +88,50 @@ li {
 .navliststyle-header{
   display: flex;
   align-items: center;
-}
+  justify-content: space-between;
+  width: 100%;
+ }
 
 .header-menu{
   display: flex;
-  padding: 24px;
+  padding: 0;
   gap: 24px;
   justify-content: center;
   align-items: center;
   position: relative;
-}
+  margin-right: 137px;
+  }
 
 .header-link{
   text-decoration: none;
+  position: relative;
+  color: var(--black);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
  }
+
 
  .active::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: -1px;
-  height: 4px;
+  height: 1px;
   border-radius: 2px;
   width: 100%;
   background-color: var(--orange);
-  margin-bottom: -2px;
+  margin-bottom: -20px;
+
 }
 
  .social-media-list{
   display: flex;
   gap: 18px;
+  padding-right: 20px;
  }
 
 .buynowbutton {
@@ -152,19 +173,27 @@ li {
   border-radius: 100px;
   border: 1px solid #fff;
   justify-content: center;
-  color: #FFF;
+  background: none;
+
+}
+
+.howitsmade a{
+  text-decoration: none;
+  color: var(--white);
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background: none;
-
 }
 
 .howitsmade:hover {
-  border: 1px solid #FD9222;
-  color: #FD9222;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+.howitsmade:hover a{
+  color: var(--orange);
 }
 
 .divbutton{
@@ -200,11 +229,11 @@ li {
   border-radius: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .arrowbuttonsvg {
   fill: var(--orange);
-  margin: auto;
 }
 
 .scrolldown:hover .arrowbuttonsvg{
@@ -217,4 +246,106 @@ li {
 
 .scrolldown:hover .arrowbutton{
   background-color: var(--orange);
+}
+
+.navigation-mobile {
+  margin-left: 0;
+}
+
+.menu-mobile .header-link {
+  font-size: 36px;
+  text-align: start;
+  color: var(--white);
+}
+
+.menu-mobile{
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+// Mobile view
+
+@media screen and (max-width:767px) {
+  .header-menu, .social-media-list {
+      display: none;
+  }
+
+  .chocolatehero img {
+    max-width: 100%;
+  }
+
+  .divbutton {
+    flex-wrap: wrap;
+  }
+
+  .h1hero {
+  color: var(--white);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.6px;
+  padding-left: 20px;
+  }
+
+  .buynowbutton{
+    margin-left: 20px;
+  }
+
+  .scrolldown{
+    margin-left: 20px;
+  }
+
+}
+
+// .menu-container, .js-menu-container {
+//   background-color: var(--black);
+//   width: 100vw;
+//   height: 100vh;
+//   }
+
+.menu-mobile {
+  margin-top: 156px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
+  row-gap: 24px;
+  display: flex;
+  }
+
+.header-link.active-mobile {
+  color: var(--orange);
+}
+
+.social-media-mobile svg{
+  stroke: var(--white);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--black);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
 }
