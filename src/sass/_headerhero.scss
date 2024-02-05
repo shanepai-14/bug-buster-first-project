@@ -415,12 +415,11 @@ li {
   fill: var(--orange);
 }
 .js-open-menu {
-  background: none;
-
+  background: transparent;
+  border: none;
   position: absolute;
   top: 25px;
   right: 27px;
-  display: none;
 }
 
 .social-media-hamburger {
