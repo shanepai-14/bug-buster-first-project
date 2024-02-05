@@ -29,7 +29,23 @@
 
 .subscribe-button-close {
   position: absolute;
-  right: 0;
+  top: 24;
+  right: 24;
+  background: transparent;
+  border: none;
+}
+
+.subscribe-button-close:hover .sub-close-icon {
+  stroke: var(--orange);
+}
+
+.sub-close-icon {
+  stroke: var(--white);
+  transition: all 250ms ease-in-out;
+}
+
+.subscribe-modal-input {
+  padding: 40px 40px;
 }
 
 .subscribe-modal-input h1 {
@@ -40,4 +56,65 @@
   line-height: 28px;
   letter-spacing: -0.72px;
   text-transform: uppercase;
+}
+
+.subscribe-modal-input span {
+  color: var(--black);
+}
+
+.subscribe-modal-input form {
+  margin-top: 28px;
+}
+
+.subscribe-modal-input form input {
+  width: 313px;
+  height: 52px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+}
+
+.subscribe-modal-input form input:focus {
+  border-color: var(--orange);
+}
+
+.subscribe-modal-input form input::placeholder {
+  padding: 14px 24px;
+  color: rgba(64, 64, 64, 0.3);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.subscribe-modal-input form button {
+  border-radius: 100px;
+  width: 137px;
+  height: 52px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 250ms ease-in-out;
+}
+
+.subscribe-modal-input form button:hover {
+  background-color: var(--nakedbrown);
+  color: var(--orange);
+}
+
+//mobile
+
+@media screen and (max-width: 767px) {
+  .subscribe-modal {
+    width: 311px;
+  }
+
+  .subscribe-modal-image {
+    height: 169px;
+  }
 }
