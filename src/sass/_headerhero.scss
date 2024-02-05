@@ -304,7 +304,10 @@ li {
   .social-media-list {
     display: none;
   }
-
+  .js-open-menu,
+  .menu-toggle {
+    display: block;
+  }
   .chocolatehero img {
     max-width: 100%;
   }
