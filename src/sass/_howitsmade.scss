@@ -1,0 +1,149 @@
+.header {
+    padding: 10px;
+    text-align: center;
+}
+
+.first-span {
+color: #111;
+text-align: center;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: -0.72px;
+text-transform: uppercase;
+        }
+    
+
+.second-span {
+ color: #FD9222;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: -0.72px;
+text-transform: uppercase;
+        }
+
+.list-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    margin-bottom: 128px;
+}
+
+.himdcontainer {
+    gap: 20px;
+}
+
+.ul-left-common {
+width: calc((100% - 20px) / 2);
+}
+
+.choco{
+    list-style-type: none;
+    color: #111;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 28px;
+
+}
+
+.div-right{
+    // display: flex;
+    padding: 32px;
+    // justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: var(--white);
+}
+
+
+.ul-right {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+    padding-left: 20px;
+}
+
+.listright{
+    color: #111;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;   
+    letter-spacing: -0.28px;
+}
+
+.listright svg{
+    margin-right: 5px;
+}
+
+.ul-left {
+        overflow: hidden;
+        border-radius: 15px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%)
+
+    }
+
+
+.ul-right li {
+    margin-bottom: 10px;
+    // padding-left: 30px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+.listright::before {
+    content: '';
+        height: 8px;
+        width: 8px;
+        display: block;
+        float: left;
+        margin-left: -1.5rem;
+        background: url('../images/bullet.svg');
+        background-size: cover;
+        background-position: center;
+        padding: 5px;
+        margin-top: 5px;
+        flex-shrink: 0;
+}
+
+            // mobile
+            @media screen and (max-width:1158px) {
+            .list-container{
+                flex-direction: column;
+            
+            }
+
+            .ul-left-common {
+             width: 100%;
+            }
+
+            .ul-left{
+            height: 500px;
+            }
+
+           }
+
+
+         @media only screen and (max-width: 767px){
+            .div-right {
+                    padding: 20px 14px;
+                }
+                    
+                }
