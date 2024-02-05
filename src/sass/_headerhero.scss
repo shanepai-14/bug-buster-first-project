@@ -327,7 +327,10 @@ li {
   .divbutton {
     flex-wrap: wrap;
   }
-
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .h1hero {
     color: var(--white);
     font-family: Montserrat;
