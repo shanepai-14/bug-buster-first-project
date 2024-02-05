@@ -278,6 +278,13 @@ li {
 }
 
 // Tablet view
+@media screen and (min-width: 1159px) {
+  .js-open-menu,
+  .menu-toggle {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1158px) {
   .header-menu,
   .social-media-list {

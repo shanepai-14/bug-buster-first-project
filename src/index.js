@@ -66,16 +66,14 @@ var swiper = new Swiper('.reviewSwiper', {
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
-
-  window.matchMedia('(max-width: 1158px)').addEventListener('change', e => {
-    if (!e.matches) return;
-
-    openMenuBtn.style.display = 'block';
-  });
-
   window.matchMedia('(min-width: 1159px)').addEventListener('change', e => {
     if (!e.matches) return;
 
     openMenuBtn.style.display = 'none';
+  });
+  window.matchMedia('(max-width: 1158px)').addEventListener('change', e => {
+    if (!e.matches) return;
+
+    openMenuBtn.style.display = 'block';
   });
 })();
