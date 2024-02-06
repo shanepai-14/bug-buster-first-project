@@ -112,14 +112,40 @@
   // outline: transparent;
 }
 
+.submit-btn {
+  display: none;
+}
+
 //mobile
 
 @media screen and (max-width: 767px) {
   .subscribe-modal {
-    width: 311px;
+    width: 90%;
   }
 
   .subscribe-modal-image {
     height: 169px;
+  }
+  .subscribe-modal-input form {
+    display: flex;
+    position: relative;
+  }
+
+  .subscribe-modal-input form input {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
+  .subscribe-modal-input form .subscribe-btn {
+    right: 0;
+    width: 100px;
+    display: none;
+  }
+
+  .subscribe-modal-input form .submit-btn {
+    display: block;
+    position: absolute;
+    right: -10px;
+    padding: 14px 28px;
   }
 }
