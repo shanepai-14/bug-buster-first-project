@@ -47,7 +47,8 @@
   transition: all 250ms ease-in-out;
 }
 
-.subscribe-section button:hover {
+.subscribe-section button:hover,
+.subscribe-section button:focus {
   color: var(--orange);
   background-color: var(--nakedbrown);
 }

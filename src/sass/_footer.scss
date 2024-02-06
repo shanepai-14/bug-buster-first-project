@@ -86,8 +86,10 @@
   transition: all 250ms ease-in-out;
 }
 
-.footer-nav li a:hover {
+.footer-nav li a:hover,
+.footer-nav li a:focus {
   color: var(--orange);
+  outline: none;
 }
 
 //tablet

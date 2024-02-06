@@ -105,9 +105,11 @@
   transition: all 250ms ease-in-out;
 }
 
-.subscribe-modal-input form button:hover {
+.subscribe-modal-input form button:hover,
+.subscribe-modal-input form button:focus {
   background-color: var(--nakedbrown);
   color: var(--orange);
+  // outline: transparent;
 }
 
 //mobile
