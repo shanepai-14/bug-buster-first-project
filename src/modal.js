@@ -46,8 +46,8 @@
 (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-buynow-open]'),
-    closeModalBtn: document.querySelector('[data-modal-topseller-close]'),
-    modal: document.querySelector('[data-modal-topseller]'),
+    closeModalBtn: document.querySelector('[data-modal-buynow-close]'),
+    modal: document.querySelector('[data-modal-buynow]'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
