@@ -33,6 +33,7 @@
   }
   .caption{
     padding-left: 0;
+    max-width: 50%;
     
   }
   .pic img {
@@ -61,6 +62,7 @@ font-weight: 400;
 line-height: 18px; /* 128.571% */
 letter-spacing: -0.28px;
 }
+
 //   // MODAL STYLING
 //   .modal {
 //     width: 609;
@@ -146,6 +148,9 @@ letter-spacing: -0.28px;
   .pic{
     width: calc((100% - 16px) / 2 );}
 }
+  .caption-tablet{
+    display: block;
+  }
 @media screen and (max-width: 767px) {
   .seller-section h1 {
     font-size: 20px;

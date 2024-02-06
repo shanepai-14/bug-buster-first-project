@@ -122,10 +122,16 @@
   }
 
   .modal-buynow .modal {
-    max-width: 609px;
     min-width: 311px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .modal-buynow .modal h1 {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .modal-buynow .modal {
+    max-width: 90%;
   }
 }
