@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.choco {
+.chocochoco {
   color: #111;
   font-family: Montserrat;
   font-size: 18px;
@@ -286,15 +286,24 @@ li {
   font-weight: 500;
   line-height: 24px; /* 120% */
   letter-spacing: -0.6px;
+  padding-left: 20px;
+  }
+
+  .buynowbutton{
+    margin-left: 20px;
+  }
+
+  .scrolldown{
+    margin-left: 20px;
   }
 
 }
 
-.menu-container, .js-menu-container {
-  background-color: var(--black);
-  width: 100vw;
-  height: 100vh;
-  }
+// .menu-container, .js-menu-container {
+//   background-color: var(--black);
+//   width: 100vw;
+//   height: 100vh;
+//   }
 
 .menu-mobile {
   margin-top: 156px;
@@ -316,3 +325,27 @@ li {
   stroke: var(--white);
 }
 
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--black);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
