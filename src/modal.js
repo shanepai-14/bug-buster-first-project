@@ -42,3 +42,18 @@
     refs.modal.classList.toggle('is-hidden-subscribe');
   }
 })();
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-modal-buynow-open]'),
+    closeModalBtn: document.querySelector('[data-modal-topseller-close]'),
+    modal: document.querySelector('[data-modal-topseller]'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden-topseller');
+  }
+})();
