@@ -1,0 +1,133 @@
+.footer-section {
+  background-color: var(--darkblue);
+  width: 100%;
+  color: var(--white);
+  padding: 50px 32px 50px 32px;
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-contact {
+  display: flex;
+  gap: 63px;
+}
+
+.contact-us {
+  text-decoration: none;
+  color: var(--white);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+}
+
+.footer-first-list a {
+  transition: all 250ms ease-in-out;
+}
+
+.footer-first-list a:hover {
+  color: var(--orange);
+}
+
+.footer-first-list li:nth-child(1) {
+  margin-bottom: 14px;
+}
+
+.footer-socmed {
+  display: flex;
+  gap: 18px;
+}
+
+.slogan {
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -0.56px;
+  font-style: normal;
+  font-size: 28px;
+  margin-bottom: 64px;
+}
+
+.slogan-chocolate {
+  color: var(--orange);
+}
+
+.footer-icon {
+  stroke: var(--white);
+  transition: all 250ms ease-in-out;
+}
+
+.footer-icon:hover {
+  color: var(--orange);
+}
+
+.footer-nav {
+  list-style-type: none;
+  display: flex;
+  gap: 14px;
+  padding-left: 0;
+  margin-top: 24px;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: -0.28px;
+  transition: all 250ms ease-in-out;
+}
+
+.footer-nav li a:hover {
+  color: var(--orange);
+}
+
+//tablet
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+  .footer-contact {
+    gap: 50px;
+  }
+}
+
+//mobile
+
+@media screen and (max-width: 767px) {
+  .footer-section {
+    padding: 32px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .slogan {
+    margin-bottom: 32px;
+  }
+
+  .footer-contact {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .footer-socmed li {
+    height: 94px;
+  }
+
+  .footer-first-list {
+    padding-left: 0;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    row-gap: 18px;
+    margin-top: 32px;
+  }
+}
