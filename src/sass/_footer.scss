@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .footer-section {
   background-color: var(--darkblue);
   width: 100%;
@@ -64,7 +68,7 @@
 }
 
 .footer-icon:hover {
-  color: var(--orange);
+  stroke: var(--orange);
 }
 
 .footer-nav {
@@ -81,13 +85,15 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px; /* 114.286% */
+  line-height: 16px;
   letter-spacing: -0.28px;
   transition: all 250ms ease-in-out;
 }
 
-.footer-nav li a:hover {
+.footer-nav li a:hover,
+.footer-nav li a:focus {
   color: var(--orange);
+  outline: none;
 }
 
 //tablet
